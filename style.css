@@ -1,0 +1,129 @@
+* {
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: rgba(210, 207, 207, 0.933);
+}
+
+header {
+    font-size: 5em;
+    color: #2679b9;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.container {
+    height: 550px;
+    width: 550px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: aqua;
+    margin-top: 100px;
+    animation: 1s in-out ease-in-out;
+}
+
+@keyframes in-out {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+.box {
+    margin: 10px;
+    padding: 20px;
+    height: 95%;
+    box-sizing: border-box;
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(19, 1, 37);
+}
+
+.first {
+    display: flex;
+    height: 15%;
+    gap: 8px;
+}
+
+.output {
+    width: 80%;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    padding: 11px;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.clear {
+    border: 1px solid black;
+    width: 20%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(231, 9, 75)
+}
+
+.second {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button {
+    width: 35%;
+    border-radius: 20px;
+    background-color: purple;
+}
+
+.end {
+    width: 15%;
+    border-radius: 20px;
+    background-color: purple;
+}
+
+.button:hover {
+    background: rgb(0, 117, 128);
+}
+
+.end:hover {
+    background: royalblue;
+}
+
+.clear:hover {
+    background: royalblue;
+}
+
+.equal {
+    background-color: rgb(231, 9, 75);
+}
+
+input:active[type=button] {
+    background: #26b952;
+    scale: 0.9;
+}
+
+.clear:active[type=button] {
+    background: #2679b9;
+}
+
+.equal:active {
+    background: #2679b9;
+}
+
+.back {
+    background-color: rgb(231, 9, 75);
+    width: 28%;
+    border-radius: 20px;
+}
