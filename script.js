@@ -11,7 +11,9 @@ function multiply(a, b) {
     // console.log(a+b);
 }
 function divide(a, b) {
-    return a / b;
+    if(b==0)
+    alert("Number cannot be divided by Zero!!");
+        return a / b;
     // console.log(a+b);
 }
 function operate(op, num1, num2) {
@@ -29,39 +31,41 @@ function operate(op, num1, num2) {
         ans = divide(num1, num2);
     }
     console.log(ans);
-    display(ans);
-
+    display(Number.parseFloat(ans).toFixed(8));
 }
-function display(value1)
-{
-    text=document.getElementById('output1').value;
-    text=text+value1;
-    document.getElementById('output1').value=text;
+function display(value1) {
+    text = document.getElementById('output1').value;
+    text = text + value1;
+    document.getElementById('output1').value = text;
     console.log(value1);
     return text;
 }
-function calculate()
-{
+function calculate() {
     let index;
     let num1;
     let op;
     let num2;
-    for(let i=0;i<text.length;i++)
-    {
-        if(text.charAt(i)=='+' || text.charAt(i)=='-' || text.charAt(i)=='*' || text.charAt(i)=='/')
-        index=i;
+    for (let i = 0; i < text.length; i++) {
+        if (text.charAt(i) == '+' || text.charAt(i) == '-' || text.charAt(i) == '*' || text.charAt(i) == '/')
+            index = i;
     }
-    num1=Number(text.slice(0,index));
-    num2=Number(text.slice(index+1));
-    op=text[index];
-    console.log(num1);
-    console.log(num2);
-    console.log(op);
-    clearDisplay();
-    operate(op,num1,num2);
+    if (index == undefined) {
+    }
+    else {
+        num1 = Number(text.slice(0, index));
+        num2 = Number(text.slice(index + 1));
+        op = text[index];
+        console.log(num1);
+        console.log(num2);
+        console.log(op);
+        clearDisplay();
+        operate(op, num1, num2);
+    }
 }
-function clearDisplay()
-{
-    text="";
-    document.getElementById('output1').value=text;
+function clearDisplay() {
+    text = "";
+    document.getElementById('output1').value = text;
+}
+function clearScreen() {
+    clearDisplay();
 }
